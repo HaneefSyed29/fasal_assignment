@@ -16,6 +16,8 @@ const Homepage = () => {
   const [movieList, setMovieList] = useState([]);
   const { logout } = useAuth0();
 
+  console.log(API_URL);
+
   useEffect(() => {
     searchMovies("Batman");
   }, []);
