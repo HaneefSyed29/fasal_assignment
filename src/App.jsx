@@ -19,13 +19,9 @@ import Homepage from "./components/Home/homepage";
 function App() {
   const { isAuthenticated, isLoading } = useAuth0();
 
-  console.log("isAuthenticated:", isAuthenticated);
-  console.log("isLoading:", isLoading);
-
   if (isLoading) return <div>Loading...</div>;
 
   return <>{isAuthenticated ? <Homepage /> : <LoginButton />}</>;
 }
 
 export default App;
-

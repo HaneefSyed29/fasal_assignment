@@ -16,8 +16,6 @@ const Homepage = () => {
   const [movieList, setMovieList] = useState([]);
   const { logout } = useAuth0();
 
-  console.log(API_URL);
-
   useEffect(() => {
     searchMovies("Batman");
   }, []);
@@ -25,7 +23,6 @@ const Homepage = () => {
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
-    console.log(data);
     setMovies(data.Search);
   };
 
